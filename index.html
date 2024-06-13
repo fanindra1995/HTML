@@ -3,61 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermarket Webpage</title>
+    <title>Product Order Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        .section {
-            margin: 20px;
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .section img {
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            max-width: 300px;
-            height: auto;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Supermarket</h1>
-        <nav>
-            <ul>
-                <li><a href="#fruits">Fruits</a></li>
-                <li><a href="#vegetables">Vegetables</a></li>
-                <li><a href="#dairy">Dairy Products</a></li>
-                <li><a href="#bakery">Bakery Items</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div id="fruits" class="section">
-        <h2>Fruits</h2>
-        <a href="https://in.images.search.yahoo.com/search/images;_ylt=Awrx_MRi2mZmye8b.w29HAx.;_ylu=c2VjA3NlYXJjaARzbGsDYXNzaXN0;_ylc=X1MDMjExNDcyMzAwNQRfcgMyBGZyA21jYWZlZQRmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkAzBGWlBrV2MzUUZlMmtLWXV2cUdQTkEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNpbi5pbWFnZXMuc2VhcmNoLnlhaG9vLmNvbQRwb3MDMQRwcXN0cgNmcnVpdHMEcHFzdHJsAzYEcXN0cmwDNgRxdWVyeQNmcnVpdHMEdF9zdG1wAzE3MTgwMTY2OTEEdXNlX2Nhc2UD?p=fruits&fr=mcafee&fr2=sa-gp-search&ei=UTF-8&x=wrt">
-            <img src="Culinary_fruits_front_view.jpg.crdownload"Fruits Section">
-        </a>
-    </div>
+<div class="container">
+    <h1>Place Your Order</h1>
+    <form>
+        <!-- Product Details -->
+        <div class="form-group">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product-name" required>
+        </div>
+        <div class="form-group">
+            <label for="product-id">Product ID</label>
+            <input type="text" id="product-id" name="product-id" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="color">Color</label>
+            <select id="color" name="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="size">Size</label>
+            <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+        </div>
 
-    <div id="vegetables" class="section">
-        <h2>Vegetables</h2>
-        <a href="https://in.images.search.yahoo.com/search/images;_ylt=AwrKBAxe2mZmwnYO7iy7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj?p=vegetables&fr=mcafee">
-            <img src="thumb-1920-632989.jpg" alt="Vegetables Section">
-        </a>
-    </div>
+        <!-- Customer Details -->
+        <div class="form-group">
+            <label for="customer-name">Customer Name</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Shipping Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
 
-    <div id="dairy" class="section">
-        <h2>Dairy Products</h2>
-        <a href="https://in.images.search.yahoo.com/search/images;_ylt=Awr1RVqA4GZmrj8XA6u9HAx.;_ylu=c2VjA3NlYXJjaARzbGsDYXNzaXN0;_ylc=X1MDMjExNDcyMzAwNQRfcgMyBGZyA21jYWZlZQRmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkA25HVlZvMTRiUzlhVjZsWEZvU0pmcEEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNpbi5pbWFnZXMuc2VhcmNoLnlhaG9vLmNvbQRwb3MDMQRwcXN0cgNkYW9pcnkgcHJvZHVjdHMgaW1hZ2VzBHBxc3RybAMyMgRxc3RybAMyMQRxdWVyeQNkYWlyeSUyMHByb2R1Y3RzJTIwaW1hZ2VzBHRfc3RtcAMxNzE4MDE4MzQ3BHVzZV9jYXNlAw--?p=dairy+products+images&fr=mcafee&fr2=sa-gp-search&ei=UTF-8&x=wrt#id=2&iurl=https%3A%2F%2Floveenglish.org%2Fwp-content%2Fuploads%2F2020%2F06%2FDairy-Products-1.jpg&action=click">
-            <img src="Dairy-Products-1.webp" alt="Dairy Products Section">
-        </a>
-    </div>
+        <!-- Payment Details -->
+        <div class="form-group">
+            <label for="card-name">Name on Card</label>
+            <input type="text" id="card-name" name="card-name" required>
+        </div>
+        <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" required>
+        </div>
+        <div class="form-group">
+            <label for="exp-month">Expiration Month</label>
+            <input type="text" id="exp-month" name="exp-month" required>
+        </div>
+        <div class="form-group">
+            <label for="exp-year">Expiration Year</label>
+            <input type="text" id="exp-year" name="exp-year" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+        </div>
 
-    <div id="bakery" class="section">
-        <h2>Bakery Items</h2>
-        <a href="https://in.images.search.yahoo.com/search/images;_ylt=Awr1RVqz2mZmViYYtKu9HAx.;_ylu=c2VjA3NlYXJjaARzbGsDYXNzaXN0;_ylc=X1MDMjExNDcyMzAwNQRfcgMyBGZyA21jYWZlZQRmcjIDc2EtZ3Atc2VhcmNoBGdwcmlkA3hOSnR0dlhqUUZlNEJtZ3dpRkEucEEEbl9yc2x0AzAEbl9zdWdnAzEwBG9yaWdpbgNpbi5pbWFnZXMuc2VhcmNoLnlhaG9vLmNvbQRwb3MDNwRwcXN0cgNiYWtlcgRwcXN0cmwDNQRxc3RybAMxMwRxdWVyeQNiYWtlcnklMjBpbWFnZXMEdF9zdG1wAzE3MTgwMTgxNzYEdXNlX2Nhc2UD?p=bakery+images&fr=mcafee&fr2=sa-gp-search&ei=UTF-8&x=wrt#id=11&iurl=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2018%2F03%2F19%2F586318-bakery-bread-photography.jpg&action=click">
-            <img src="586318-bakery-bread-photography.jpg" alt="Bakery Items Section">
-        </a>
-    </div>
+        <div class="form-group">
+            <button type="submit">Place Order</button>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
