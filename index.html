@@ -3,147 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Order Form</title>
+    <title>Nested Table Example</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .form-group button {
-            width: 100%;
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
             padding: 10px;
-            background-color: #5cb85c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .form-group button:hover {
-            background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Place Your Order</h1>
-    <form>
-        <!-- Product Details -->
-        <div class="form-group">
-            <label for="product-name">Product Name</label>
-            <input type="text" id="product-name" name="product-name" required>
-        </div>
-        <div class="form-group">
-            <label for="product-id">Product ID</label>
-            <input type="text" id="product-id" name="product-id" required>
-        </div>
-        <div class="form-group">
-            <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
-        </div>
-        <div class="form-group">
-            <label for="color">Color</label>
-            <select id="color" name="color">
-                <option value="red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-                <option value="black">Black</option>
-                <option value="white">White</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="size">Size</label>
-            <select id="size" name="size">
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="xl">XL</option>
-                <option value="xxl">XXL</option>
-            </select>
-        </div>
+    <h1>Nested Table Example</h1>
 
-        <!-- Customer Details -->
-        <div class="form-group">
-            <label for="customer-name">Customer Name</label>
-            <input type="text" id="customer-name" name="customer-name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-            <label for="address">Shipping Address</label>
-            <textarea id="address" name="address" rows="4" required></textarea>
-        </div>
-        <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
-        </div>
-        <div class="form-group">
-            <label for="state">State</label>
-            <input type="text" id="state" name="state" required>
-        </div>
-        <div class="form-group">
-            <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip" required>
-        </div>
-
-        <!-- Payment Details -->
-        <div class="form-group">
-            <label for="card-name">Name on Card</label>
-            <input type="text" id="card-name" name="card-name" required>
-        </div>
-        <div class="form-group">
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" name="card-number" required>
-        </div>
-        <div class="form-group">
-            <label for="exp-month">Expiration Month</label>
-            <input type="text" id="exp-month" name="exp-month" required>
-        </div>
-        <div class="form-group">
-            <label for="exp-year">Expiration Year</label>
-            <input type="text" id="exp-year" name="exp-year" required>
-        </div>
-        <div class="form-group">
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" required>
-        </div>
-
-        <div class="form-group">
-            <button type="submit">Place Order</button>
-        </div>
-    </form>
-</div>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Stationery</td>
+            <td>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Notebook</td>
+                        <td>$2.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pen</td>
+                        <td>$1.50</td>
+                    </tr>
+                    <tr>
+                        <td>Pencil</td>
+                        <td>$0.50</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>Office Supplies</td>
+            <td>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Stapler</td>
+                        <td>$5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Paper Clips</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Scissors</td>
+                        <td>$3.00</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
 </body>
 </html>
