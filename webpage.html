@@ -3,12 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embed Webpage with Iframe</title>
+    <title>Webpage with Table and Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .rgba-cell {
+            background-color: rgba(255, 99, 71, 0.5);
+        }
+
+        .hex-cell {
+            background-color: #FF634780;
+        }
+
+        .section {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section img {
+            width: 30%;
+            margin-right: 20px;
+        }
+
+        .content {
+            width: 65%;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Embedding an Entire Webpage</h1>
-    <iframe src="https://www.amazon.in/?tag=msndeskstdin-21&ref=pd_sl_2otn8yrxsx_e&adgrpid=1326012680603324&hvadid=82876055432358&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=148757&hvtargid=kwd-82876733734104:loc-90&hydadcr=5628_2377283&msclkid=94cf836c4aba171a2641e50753644af6" width="100%" height="600" frameborder="0"></iframe>
+    <h1>Table with RGBA and Hex Colors</h1>
+    <table>
+        <tr>
+            <td class="rgba-cell">Cell 1</td>
+            <td class="hex-cell">Cell 2</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 3</td>
+            <td class="hex-cell">Cell 4</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 5</td>
+            <td class="hex-cell">Cell 6</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 7</td>
+            <td class="hex-cell">Cell 8</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 9</td>
+            <td class="hex-cell">Cell 10</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 11</td>
+            <td class="hex-cell">Cell 12</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 13</td>
+            <td class="hex-cell">Cell 14</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 15</td>
+            <td class="hex-cell">Cell 16</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 17</td>
+            <td class="hex-cell">Cell 18</td>
+        </tr>
+        <tr>
+            <td class="rgba-cell">Cell 19</td>
+            <td class="hex-cell">Cell 20</td>
+        </tr>
+    </table>
+
+    <h1>Sections with Images</h1>
+
+    <div class="section">
+        <img src="th.jpg" alt="Placeholder Image 1">
+        <div class="content">
+            <h2>Section 1</h2>
+            <p>This is the first section with an image and some content.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="th (2).jpg" alt="Placeholder Image 2">
+        <div class="content">
+            <h2>Section 2</h2>
+            <p>This is the second section with an image and some content.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="th (1).jpg" alt="Placeholder Image 3">
+        <div class="content">
+            <h2>Section 3</h2>
+            <p>This is the third section with an image and some content.</p>
+        </div>
+    </div>
 
 </body>
 </html>
